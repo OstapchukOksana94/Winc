@@ -1,0 +1,610 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+@font-face {
+	font-family: "brown-bold";
+	src: url("/fonts/brown-bold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: bold;
+}
+
+
+@font-face {
+	font-family: "brown-light";
+	src: url("/fonts/brown-light.woff2") format("woff2");
+	font-style: normal;
+	font-weight: lighter;
+}
+
+
+@font-face {
+	font-family: "brown-regular";
+	src: url("/fonts/brown-regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+.header {
+	width: 100%;
+	position: sticky;
+	background-color: rgb(255, 255, 255);
+	top: 0;
+	box-shadow: 0 1px 1.5px 0.3px rgba(0,0,0,0.2);
+	z-index: 10;
+
+}
+
+
+.nav__menu,
+.nav__logo,
+.nav__links {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+
+.nav__menu ul,
+.nav__links ul  {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	float: left;
+}
+
+.nav__menu {
+	margin-left: 50px;
+}
+
+/*
+.nav__menu li a {
+	padding: 14px 25px;
+	color: rgb(30, 30, 30);
+	display: block;
+	position: relative;
+	font-family: "brown-bold", sans-serif;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+
+}
+*/
+
+/* Заменила .nav__menu li a на .firstbtn, .dropbtn, думаю, что так будет 
+правильно, при том, что ничего не изменилось*/
+
+
+.firstbtn,
+.dropbtn {
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	padding: 14px 25px;
+	color: rgb(30, 30, 30);
+	display: block;
+	position: relative;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+}
+
+
+
+.dropdown__content a:hover {
+	color: #eab89b;
+}
+
+	
+li.dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+.dropdown:last-child {
+	margin-left: 15px;
+}
+
+
+.dropdown__content {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	box-shadow: 0 4px 8px 0.2px rgba(0,0,0,0.2)
+	border-top: none;
+}
+
+.header__drop-item {
+	background-color: white;
+	color: black;
+	display: block;
+	padding: 12px 16px;
+	text-align: left;
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+}
+
+
+
+.header__drop-item:hover {
+	color: #f55;
+	cursor: pointer;
+}
+
+.dropdown:hover .dropdown__content {
+	display: block;
+	z-index: 1;
+}
+
+.dropdown:hover .down__arrow {
+	transform: scaleY(-1);
+}
+
+.dropdown:hover .down__arrow::before,
+.dropdown:hover .down__arrow::after {
+	background-color: blue;
+}
+
+.down__arrow {
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	transition: all 0.3s ease;
+}
+
+
+.down__arrow::before, 
+.down__arrow::after {
+	content: '';
+	background-color: #96887E;
+	height: 1px;
+	width: 6px;
+	position: absolute;
+	top: 5px;
+	z-index: 1;
+	transition: all 0.2s ease;
+
+}
+
+.down__arrow::before {
+	transform: rotate(45deg);
+
+}
+
+.down__arrow::after {
+	transform: rotate(-45deg);
+	left: 4px;
+}
+
+
+/*.dropdown::after {
+	content: " ";
+	position: absolute;
+	border-top: 6px solid #96887E;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	top: 22px;
+	right: 0;
+	transition: all 0.3s ease;
+}*/
+
+
+
+.nav__logo {
+	position: absolute;
+	right: 50%;
+	top: 13px;
+	margin: 0 auto;
+}
+
+
+
+.nav__links {
+	margin-right: 50px;
+	padding-right: 25px;
+	position: absolute;
+	right: 0;
+}
+
+
+
+.signbtn,
+.startbtn {
+	padding: 14px 25px;
+	color: rgb(30, 30, 30);
+	display: block;
+	position: relative;
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+}
+
+.nav__links .startbtn {
+	border: 2px solid #f22;
+	border-radius: 40px;
+	color: #f22;
+	padding: 10px 15px;
+}
+
+
+.intro {
+	background-image: url(https://www.winc.com/assets/images/winc-banners/homepage/let-there-be-wine.jpg);
+	background-size: auto;
+	background-position: -70px;
+	height: 585px;
+	position: relative;
+}
+
+
+.intro__content {
+	width: 100%;
+	text-align: left;
+	position: absolute;
+	top: 0;
+	left: 120px;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	height: 10em;
+}
+
+
+.intro__title {
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 1.333;
+	color: rgb(20, 20, 20);
+
+}
+
+
+.intro__text {
+	font-family: "brown-regular", sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	color: rgb(10, 10, 10);
+	letter-spacing: 1.5px;
+	margin-bottom: 30px;
+}
+
+
+.intro__button {
+	border: 2px solid #f55;
+	border-radius: 40px;
+	background-color: #f55;
+	color: #fff;
+	padding: 10px 60px;
+	text-transform: uppercase;
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	letter-spacing: 1.5px;
+	cursor: pointer;
+	height: 40px;
+}
+
+
+.intro__button:hover {
+	background-color: #f22;
+	border-color: #f22;
+}
+
+
+.arrow {
+	position: relative;
+	transition: 0.2s ease;
+	top: 35px;
+	cursor: pointer;
+}
+
+.arrow:hover {
+	top: 41px;
+
+}
+
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 965px;
+	padding: 40px 0;
+	margin-bottom: 50px;
+	padding-top: 0;
+
+}
+
+
+
+.row {
+	display: flex;
+	align-items: flex-end;
+	padding-top: 50px;
+}
+
+
+.align--right {
+	flex-direction: row;
+}
+
+.align--left {
+	flex-direction: row-reverse;
+}
+
+
+.align--right .row__image-container {
+	text-align: right;
+}
+
+
+.align--left .row__image-container {
+	text-align: left;
+}
+
+
+.row__content,
+.row__image-container {
+	width: 50%;
+}
+
+
+
+.row__content {
+	text-align: left;
+}
+
+
+.row__title {
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+
+.row__text {
+	font-family: "brown-light", sans-serif;
+	font-weight: lighter;
+	font-size: 20px;
+	line-height: 1.5;
+	padding-bottom: 40px;
+	width: 87%;
+}
+
+.row__link {
+	height: 30px;
+}
+
+.row__button {
+	border: 2px solid #f55;
+	border-radius: 40px;
+	background-color: #fff;
+	color: #f55;
+	padding: 10px 40px;
+	text-transform: uppercase;
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	letter-spacing: 1.5px;
+	cursor: pointer;
+	height: 40px;
+}
+
+.row__button:hover {
+	background-color: #f22;
+	border-color: #f22;
+	color: #fff;
+}
+
+
+.row__image {
+	height: 300px;
+	width: 300px;
+}
+
+
+.quote {
+	background-color: #e0fff7;
+	height: 364px;
+	width: 100%;
+	position: relative;
+}
+
+
+.quote__content {
+	display: block;
+	position: absolute;
+	margin: 0 auto;
+	width: 70%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+
+.quote__comment {
+	color: #4085ff;
+	font-family: Luminary, serif;
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 1.25;
+}
+
+.quote__commenter {
+	color: #4085ff;
+	font-family: Century Gotic, sans-serif;
+	font-weight: lighter;
+	padding-top: 22px;
+	letter-spacing: 0.5px;
+}
+
+
+.explanation {
+
+}
+
+
+.ex__title {
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 1.333;
+	color: rgb(20, 20, 20);
+	text-align: center;
+	margin: 90px 0 70px 0;
+	letter-spacing: 1px;
+	word-spacing: 7px;
+
+}
+
+
+.ex__steps {
+	display: flex;
+	text-align: center;
+
+}
+
+.step {
+	width: 33.3333333%;
+}
+
+
+.step__image {
+	width: 270px;
+	height: 270px;
+}
+
+
+.step__text {
+	color: rgb(20, 20, 20);
+	padding: 20px 99px;
+	font-family: Gotic, sans-serif;
+	line-height: 1.5;
+	font-size: 15px;
+	font-weight: bold;
+
+}
+
+
+.ex__link {
+	height: 30px;
+	text-align: center;
+	margin: 50px 0;
+}
+
+.ex__button {
+	border: 2px solid #f55;
+	border-radius: 40px;
+	background-color: #fff;
+	color: #f55;
+	padding: 10px 40px;
+	text-transform: uppercase;
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	letter-spacing: 1.5px;
+	cursor: pointer;
+	height: 40px;
+}
+
+.ex__button:hover {
+	cursor: pointer;
+	background-color: #f22;
+	border-color: #f22;
+	color: #fff;
+}
+
+
+
+.hashtag {
+	text-align: center;
+	font-family: "brown-bold", sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	margin: 100px 0 50px 0;
+	letter-spacing: 0.8px;
+}
+
+
+.insta__image-container {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+
+.insta__image {
+	display: block;
+	width: 220px;
+	height: 220px;
+	border-radius: 4px;
+}
+
+
+.insta__content {
+	position: relative;
+}
+
+.insta__content:nth-child(2) {
+	margin: 0 50px;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.3s ease;
+  opacity: 0.7;
+  border-radius: 4px;
+}
+
+
+.insta__content:hover .overlay {
+  height: 100%;
+}
+
+.overlay__text {
+  white-space: wrap; 
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
